@@ -4,4 +4,5 @@
 * [First Chapter](chapter1.md)
 * [安装方法](an-zhuang-fang-fa.md)
 * [Centos7源代码安装Nginx](a.md)
+* [Cent6.9 Install Nginx](cent69-install-nginx.md)
 
