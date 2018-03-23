@@ -104,8 +104,6 @@ tar zxvf nginx-1.12.2.tar.gz
 
 vi /etc/rc.d/init.d/nginx
 
-
-
 \#!/bin/bash
 
 \# chkconfig: - 18 21
@@ -140,111 +138,129 @@ prog="Nginx"
 
 start\(\) {
 
-        echo -n $"Starting $prog: "
+```css
+    echo -n $"Starting $prog: "
 
-        touch /var/lock/subsys/nginx
+    touch /var/lock/subsys/nginx
 
-        daemon $NGINX\_SBIN -c $NGINX\_CONF
+    daemon $NGINX\_SBIN -c $NGINX\_CONF
 
-        RETVAL=$?
+    RETVAL=$?
 
-        echo
+    echo
 
-        return $RETVAL
+    return $RETVAL
+```
 
 }
 
 stop\(\) {
 
-        echo -n $"Stopping $prog: "
+```
+    echo -n $"Stopping $prog: "
 
-        killproc -p $NGINX\_PID $NGINX\_SBIN -TERM
+    killproc -p $NGINX\_PID $NGINX\_SBIN -TERM
 
-        rm -rf /var/lock/subsys/nginx /var/run/nginx.pid
+    rm -rf /var/lock/subsys/nginx /var/run/nginx.pid
 
-        RETVAL=$?
+    RETVAL=$?
 
-        echo
+    echo
 
-        return $RETVAL
+    return $RETVAL
+```
 
 }
 
 reload\(\){
 
-        echo -n $"Reloading $prog: "
+```
+    echo -n $"Reloading $prog: "
 
-        killproc -p $NGINX\_PID $NGINX\_SBIN -HUP
+    killproc -p $NGINX\_PID $NGINX\_SBIN -HUP
 
-        RETVAL=$?
+    RETVAL=$?
 
-        echo
+    echo
 
-        return $RETVAL
+    return $RETVAL
+```
 
 }
 
 restart\(\){
 
-        stop
+```
+    stop
 
-        start
+    start
+```
 
 }
 
 configtest\(\){
 
-    $NGINX\_SBIN -c $NGINX\_CONF -t
+```
+$NGINX\_SBIN -c $NGINX\_CONF -t
 
-    return 0
+return 0
+```
 
 }
 
 case "$1" in
 
-  start\)
+start\)
 
-        start
+```
+    start
 
-        ;;
+    ;;
+```
 
-  stop\)
+stop\)
 
-        stop
+```
+    stop
 
-        ;;
+    ;;
+```
 
-  reload\)
+reload\)
 
-        reload
+```
+    reload
 
-        ;;
+    ;;
+```
 
-  restart\)
+restart\)
 
-        restart
+```
+    restart
 
-        ;;
+    ;;
+```
 
-  configtest\)
+configtest\)
 
-        configtest
+```
+    configtest
 
-        ;;
+    ;;
+```
 
-  \*\)
+\*\)
 
-        echo $"Usage: $0 {start\|stop\|reload\|restart\|configtest}"
+```
+    echo $"Usage: $0 {start\|stop\|reload\|restart\|configtest}"
 
-        RETVAL=1
+    RETVAL=1
+```
 
 esac
 
 exit $RETVAL
-
-
-
-
 
 ##### 添加权限：
 
