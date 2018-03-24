@@ -7,4 +7,5 @@
 * [Cent6.9 Install Nginx](cent69-install-nginx.md)
 * [Nginx排错指南](nginxpai-cuo-zhi-nan.md)
   * [400 Bad Request](nginxpai-cuo-zhi-nan/400-bad-request.md)
+  * [Nginx下只能通过域名，禁止使用ip访问](nginxpai-cuo-zhi-nan/nginxxia-zhi-neng-tong-guo-yu-ming-ff0c-jin-zhi-shi-yong-ip-fang-wen.md)
 
