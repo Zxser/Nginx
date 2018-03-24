@@ -1,3 +1,8 @@
-# First Chapter
+# 各位贡献者注意：
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+你们在编辑使用时，务必要创建一个分支，写完以后再集中进行合并即可，否则可能会造成文章混乱，（各司其职，分工明确）
+
+![](/使用注意/import.png)
+
+写完文档以后，点击Merge进行合并即可
+
