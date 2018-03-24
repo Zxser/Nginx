@@ -10,4 +10,5 @@
   * [Nginx下只能通过域名，禁止使用ip访问](nginxpai-cuo-zhi-nan/nginxxia-zhi-neng-tong-guo-yu-ming-ff0c-jin-zhi-shi-yong-ip-fang-wen.md)
 * [PHP-FPM](php-fpm.md)
   * [php-fpm负载均衡](php-fpm/php-fpmfu-zai-jun-heng.md)
+  * [Php-fpm的配置和优化](php-fpm/php-fpmde-pei-zhi-he-you-hua.md)
 
