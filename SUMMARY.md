@@ -21,4 +21,5 @@
   * [使用Nginx缓存之缓存静态内容](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-huan-cun-jing-tai-nei-rong.md)
   * [使用Nginx缓存之FastCGI缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-fastcgi-huan-cun.md)
   * [使用Nginx缓存之proxy cache](nginxxing-neng-you-hua-fang-fa/shi-yong-nginxhuan-cun-zhi-proxy-cache.md)
+  * [使用Nginx缓存之Memcached缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-memcached-huan-cun.md)
 
