@@ -12,4 +12,5 @@
   * [php-fpm负载均衡](php-fpm/php-fpmfu-zai-jun-heng.md)
   * [Php-fpm的配置和优化](php-fpm/php-fpmde-pei-zhi-he-you-hua.md)
   * [Nginx 504报错，PHP-FPM无响应的问题](php-fpm/nginx-504bao-cuo-ff0c-php-fpm-wu-xiang-ying-de-wen-ti.md)
+  * [php优化方法一](php-fpm/phpyou-hua-fang-fa-yi.md)
 
