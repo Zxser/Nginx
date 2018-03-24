@@ -19,4 +19,5 @@
   * [Nginx配置性能优化之I/O和TCP配置](nginxxing-neng-you-hua-fang-fa/nginxpei-zhi-xing-neng-you-hua-zhi-i-o-he-tcp-pei-zhi.md)
   * [提高Nginx网络吞吐量之buffers优化](nginxxing-neng-you-hua-fang-fa/ti-gao-nginx-wang-luo-tun-tu-liang-zhi-buffers-you-hua.md)
   * [使用Nginx缓存之缓存静态内容](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-huan-cun-jing-tai-nei-rong.md)
+  * [使用Nginx缓存之FastCGI缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-fastcgi-huan-cun.md)
 
