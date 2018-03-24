@@ -18,4 +18,5 @@
   * [Nginx优化之php-fpm使用socket方式连接提高性能](nginxyou-hua-zhi-php-fpm-shi-yong-socket-fang-shi-lian-jie-ti-gao-xing-neng.md)
   * [Nginx配置性能优化之I/O和TCP配置](nginxxing-neng-you-hua-fang-fa/nginxpei-zhi-xing-neng-you-hua-zhi-i-o-he-tcp-pei-zhi.md)
   * [提高Nginx网络吞吐量之buffers优化](nginxxing-neng-you-hua-fang-fa/ti-gao-nginx-wang-luo-tun-tu-liang-zhi-buffers-you-hua.md)
+  * [使用Nginx缓存之缓存静态内容](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-huan-cun-jing-tai-nei-rong.md)
 
