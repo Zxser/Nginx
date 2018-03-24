@@ -1,4 +1,4 @@
-三台Centos7服务器
+三台Centos7服务器 
 
 主：192.168.199.174
 
@@ -22,47 +22,51 @@ default.conf 修改后，删掉了注释部分
 
 upstream myServer{
 
-    server 192.168.199.170:9000 max\_fails=3 fail\_timeout=10s;
+```
+server 192.168.199.170:9000 max\_fails=3 fail\_timeout=10s;
 
-    server 192.168.199.191:9000 max\_fails=3 fail\_timeout=10s;
+server 192.168.199.191:9000 max\_fails=3 fail\_timeout=10s;
+```
 
 }
 
 server {
 
-    listen       80;
+```
+listen       80;
 
-    server\_name  localhost;
+server\_name  localhost;
 
-    location / {
+location / {
 
-        root   /home/wwwroot;
+    root   /home/wwwroot;
 
-        index  index.html index.htm;
+    index  index.html index.htm;
 
-    }
+}
 
-    error\_page   500 502 503 504  /50x.html;
+error\_page   500 502 503 504  /50x.html;
 
-    location = /50x.html {
+location = /50x.html {
 
-        root   /usr/share/nginx/html;
+    root   /usr/share/nginx/html;
 
-    }
+}
 
-    location ~ \.php$ {
+location ~ \.php$ {
 
-        root           /home/wwwroot;
+    root           /home/wwwroot;
 
-        fastcgi\_pass   myServer;
+    fastcgi\_pass   myServer;
 
-        fastcgi\_index  index.php;
+    fastcgi\_index  index.php;
 
-        fastcgi\_param  SCRIPT\_FILENAME  $document\_root$fastcgi\_script\_name;
+    fastcgi\_param  SCRIPT\_FILENAME  $document\_root$fastcgi\_script\_name;
 
-        include        fastcgi\_params;
+    include        fastcgi\_params;
 
-    }
+}
+```
 
 }
 
@@ -82,7 +86,7 @@ yum -y install wget libxml2-devel libtool
 
 \# 下载PHP
 
-wget -O php-7.1.7.tar.gz http://php.net/get/php-7.1.7.tar.gz/from/this/mirror
+wget -O php-7.1.7.tar.gz [http://php.net/get/php-7.1.7.tar.gz/from/this/mirror](http://php.net/get/php-7.1.7.tar.gz/from/this/mirror)
 
 \# 复制一份到另一个从服务器，输入yes和191的密码
 
@@ -112,7 +116,7 @@ cd php-7.1.7
 
 ./configure --enable-fpm
 
-make &amp;&amp; make install
+make && make install
 
 \# 复制和重命名配置文件
 
@@ -162,7 +166,7 @@ vi 1.php
 
 echo\("170"\);
 
-浏览器打开：http://192.168.199.174/1.php
+浏览器打开：[http://192.168.199.174/1.php](http://192.168.199.174/1.php)
 
 • 第一次打开：170
 
@@ -178,7 +182,7 @@ echo\("170"\);
 
 第四步：
 
-配合 Laravel 的优雅链接设置
+配合 Laravel 的优雅链接设置
 
 先修改 主服务器 的 /etc/nginx/conf.d/default.conf
 
@@ -186,13 +190,15 @@ echo\("170"\);
 
 location / {
 
-    root   /home/wwwroot;
+```
+root   /home/wwwroot;
 
-    index  index.html index.htm;
+index  index.html index.htm;
 
-    \# 就加了下面一段
+\# 就加了下面一段
 
-    try\_files $uri $uri/ /index.php?$query\_string;
+try\_files $uri $uri/ /index.php?$query\_string;
+```
 
 }
 
@@ -209,6 +215,4 @@ echo '&lt;hr /&gt;';
 var\_dump\($\_SERVER\);
 
 然后OK了，自己去测试吧。
-
-
 
