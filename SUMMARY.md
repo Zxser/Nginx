@@ -13,8 +13,8 @@
   * [Php-fpm的配置和优化](php-fpm/php-fpmde-pei-zhi-he-you-hua.md)
   * [Nginx 504报错，PHP-FPM无响应的问题](php-fpm/nginx-504bao-cuo-ff0c-php-fpm-wu-xiang-ying-de-wen-ti.md)
   * [php优化方法一](php-fpm/phpyou-hua-fang-fa-yi.md)
-  * [Nginx优化之php-fpm使用socket方式连接提高性能](nginxyou-hua-zhi-php-fpm-shi-yong-socket-fang-shi-lian-jie-ti-gao-xing-neng.md)
 * [Nginx性能优化方法](nginxxing-neng-you-hua-fang-fa.md)
   * [Nginx配置性能优化之worker配置](nginxxing-neng-you-hua-fang-fa/nginxpei-zhi-xing-neng-you-hua-zhi-worker-pei-zhi.md)
+  * [Nginx优化之php-fpm使用socket方式连接提高性能](nginxyou-hua-zhi-php-fpm-shi-yong-socket-fang-shi-lian-jie-ti-gao-xing-neng.md)
   * [Nginx配置性能优化之I/O和TCP配置](nginxxing-neng-you-hua-fang-fa/nginxpei-zhi-xing-neng-you-hua-zhi-i-o-he-tcp-pei-zhi.md)
 

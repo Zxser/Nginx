@@ -6,11 +6,13 @@ Sendfile
 
 可以使用sendfile指令启用该方法。 该指令可用于http，server和location代码块：
 
-    http{
+```
+http{
 
-         sendfile on;
+     sendfile on;
 
-    }
+}
+```
 
 此指令默认为off。
 
@@ -22,23 +24,27 @@ Sendfile
 
 该方法用于数据具有较差命中率的地方。 这样的数据不需要在任何高速缓存中，并且可以在需要时加载。 它可以用于提供大文件。 directio指令启用该功能。 该指令可用于http，server和location区块：
 
-    location /video/ {
+```
+location /video/ {
 
-         directio 4m;
+     directio 4m;
 
-    }
+}
+```
 
 任何大于指令中指定的文件将由直接I/O加载。 其它情况下禁用此参数。
 
-直接I/O取决于执行数据传输时的块大小。 NGINX有directio\_alignment指令来设置块大小。 该指令可用于http，server和location区块：
+直接I/O取决于执行数据传输时的块大小。 NGINX有directio\_alignment指令来设置块大小。 该指令可用于http，server和location区块：
 
-    location /video/ {
+```
+location /video/ {
 
-         directio 4m;
+     directio 4m;
 
-         directio\_alignment 512;
+     directio\_alignment 512;
 
-    }
+}
+```
 
 除了XFS文件系统，默认值512字节在所有Linux版本运行良好。在此文件系统下，大小应增加到4 KB。
 
@@ -48,11 +54,13 @@ Sendfile
 
 aio命令可在NGINX配置的http，server和location区块下使用。 根据在指令所在区块，该指令将为匹配的请求执行异步I/O。 该参数适用于Linux内核2.6.22+和FreeBSD 4.3。 如下代码：
 
-    location /data {
+```
+location /data {
 
-         aio on;
+     aio on;
 
-    }
+}
+```
 
 默认情况下，该参数设置为off。 在Linux上，aio需要启用direction，而在FreeBSD上，sendfile需要禁用以使aio生效。
 
@@ -60,23 +68,23 @@ aio命令可在NGINX配置的http，server和location区块下使用。 根据�
 
 为了使用线程值，在编译Nginx时使用–with-threads选项配置多线程支持。 在NGINX全局上下文中使用thread\_pool指令添加一个线程池。 在aio配置中使用该线程池：
 
-    thread\_pool io\_pool threads=16;
+```
+thread\_pool io\_pool threads=16;
 
-       http{
+   http{
 
-       ........
+   ........
 
-          location /data{
+      location /data{
 
-            sendfile    on;
+        sendfile    on;
 
-            aio        threads=io\_pool;
+        aio        threads=io\_pool;
 
-    } }
+} }
+```
 
 配置Nginx TCP
-
-
 
 HTTP是一种基于应用的协议，它使用TCP作为传输层。 在TCP中，数据以称为TCP分组的块的形式传送。 NGINX提供了改变底层TCP栈的行为的指令。 这些参数更改了单个套接字连接的属性。
 
@@ -88,11 +96,13 @@ ohn Nagle通过不立即发送小包来解决问题（Nagle的算法）。 所�
 
 在打开套接字时可以使用TCP\_NODELAY选项来禁用Nagle的缓冲算法，并在数据可用时立即发送。 NGINX提供了tcp\_nodelay指令来启用此选项。 该指令可用于http，server和location区块：
 
-    http{
+```
+http{
 
-         tcp\_nodelay on;
+     tcp\_nodelay on;
 
-    }
+}
+```
 
 该指令默认情况下启用。
 
@@ -102,13 +112,13 @@ TCP\_CORK
 
 NGINX提供了tcp\_nopush指令，在连接套接字时启用TCP\_CORK。 该指令可用于http，server和location区块：
 
-    http{
+```
+http{
 
-         tcp\_nopush on;
+     tcp\_nopush on;
 
-    }
-
-
+}
+```
 
 
 
