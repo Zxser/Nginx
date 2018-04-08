@@ -22,4 +22,6 @@
   * [使用Nginx缓存之FastCGI缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-fastcgi-huan-cun.md)
   * [使用Nginx缓存之proxy cache](nginxxing-neng-you-hua-fang-fa/shi-yong-nginxhuan-cun-zhi-proxy-cache.md)
   * [使用Nginx缓存之Memcached缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-memcached-huan-cun.md)
+* [一些处理方案](yi-xie-chu-li-fang-an.md)
+  * 处理大量数据高并发大流量并发操作方案
 
