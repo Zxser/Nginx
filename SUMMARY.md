@@ -8,6 +8,8 @@
 * [Nginx排错指南](nginxpai-cuo-zhi-nan.md)
   * [400 Bad Request](nginxpai-cuo-zhi-nan/400-bad-request.md)
   * [Nginx下只能通过域名，禁止使用ip访问](nginxpai-cuo-zhi-nan/nginxxia-zhi-neng-tong-guo-yu-ming-ff0c-jin-zhi-shi-yong-ip-fang-wen.md)
+  * [Nginx强制https，HTTP 301重定向到HTTPS](nginxpai-cuo-zhi-nan/nginxqiang-zhi-https-http-301-zhong-ding-xiang-dao-https.md)
+  * Nginx怎样部署SSL证书
 * [PHP-FPM](php-fpm.md)
   * [php-fpm负载均衡](php-fpm/php-fpmfu-zai-jun-heng.md)
   * [Php-fpm的配置和优化](php-fpm/php-fpmde-pei-zhi-he-you-hua.md)
@@ -25,8 +27,6 @@
   * [使用Nginx缓存之Memcached缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-memcached-huan-cun.md)
 * [一些处理方案](yi-xie-chu-li-fang-an.md)
   * [处理大量数据高并发大流量并发操作方案](yi-xie-chu-li-fang-an/chu-li-da-liang-shu-ju-gao-bing-fa-da-liu-liang-bing-fa-cao-zuo-fang-an.md)
-* [常见的报错方案](chang-jian-de-bao-cuo-fang-an.md)
-  * [400 Bad Request](chang-jian-de-bao-cuo-fang-an/400-bad-request.md)
 * [CDN](cdn.md)
   * [CentOS安装Fikker 缓存，自建CDN加速](cdn/centosan-zhuang-fikker-huan-cun-ff0c-zi-jian-cdn-jia-su.md)
 * [性能测试](xing-neng-ce-shi.md)
