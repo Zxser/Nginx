@@ -3,8 +3,9 @@
 * [Introduction](README.md)
 * [贡献者使用指南](chapter1.md)
 * [安装方法](an-zhuang-fang-fa.md)
-* [Centos7源代码安装Nginx](a.md)
-* [Cent6.9 Install Nginx](cent69-install-nginx.md)
+  * [saltstack快速批量安装nginx](saltstackkuai-su-pi-liang-an-zhuang-nginx.md)
+  * [Cent6.9 Install Nginx](cent69-install-nginx.md)
+  * [Centos7源代码安装Nginx](a.md)
 * [Nginx排错指南](nginxpai-cuo-zhi-nan.md)
   * [400 Bad Request](nginxpai-cuo-zhi-nan/400-bad-request.md)
   * [Nginx下只能通过域名，禁止使用ip访问](nginxpai-cuo-zhi-nan/nginxxia-zhi-neng-tong-guo-yu-ming-ff0c-jin-zhi-shi-yong-ip-fang-wen.md)
@@ -24,4 +25,5 @@
   * [使用Nginx缓存之Memcached缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-memcached-huan-cun.md)
 * [一些处理方案](yi-xie-chu-li-fang-an.md)
   * 处理大量数据高并发大流量并发操作方案
+  * [Php-fpm的配置和优化](yi-xie-chu-li-fang-an/php-fpmjin-cheng-cpu-biao-gao-de-yuan-yin-ji-jie-jue-fang-an.md)
 
