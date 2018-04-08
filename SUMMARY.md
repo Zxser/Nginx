@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [贡献者使用指南](chapter1.md)
 * [安装方法](an-zhuang-fang-fa.md)
   * [saltstack快速批量安装nginx](saltstackkuai-su-pi-liang-an-zhuang-nginx.md)
   * [Cent6.9 Install Nginx](cent69-install-nginx.md)
@@ -25,6 +24,5 @@
   * [使用Nginx缓存之proxy cache](nginxxing-neng-you-hua-fang-fa/shi-yong-nginxhuan-cun-zhi-proxy-cache.md)
   * [使用Nginx缓存之Memcached缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-memcached-huan-cun.md)
 * [一些处理方案](yi-xie-chu-li-fang-an.md)
-  * 处理大量数据高并发大流量并发操作方案
-  * [Php-fpm的配置和优化](yi-xie-chu-li-fang-an/php-fpmjin-cheng-cpu-biao-gao-de-yuan-yin-ji-jie-jue-fang-an.md)
+  * [处理大量数据高并发大流量并发操作方案](yi-xie-chu-li-fang-an/chu-li-da-liang-shu-ju-gao-bing-fa-da-liu-liang-bing-fa-cao-zuo-fang-an.md)
 
