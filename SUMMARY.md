@@ -25,4 +25,6 @@
   * [使用Nginx缓存之Memcached缓存](nginxxing-neng-you-hua-fang-fa/shi-yong-nginx-huan-cun-zhi-memcached-huan-cun.md)
 * [一些处理方案](yi-xie-chu-li-fang-an.md)
   * [处理大量数据高并发大流量并发操作方案](yi-xie-chu-li-fang-an/chu-li-da-liang-shu-ju-gao-bing-fa-da-liu-liang-bing-fa-cao-zuo-fang-an.md)
+* [常见的报错方案](chang-jian-de-bao-cuo-fang-an.md)
+  * [400 Bad Request](chang-jian-de-bao-cuo-fang-an/400-bad-request.md)
 
