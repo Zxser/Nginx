@@ -9,7 +9,7 @@
   * [400 Bad Request](nginxpai-cuo-zhi-nan/400-bad-request.md)
   * [Nginx下只能通过域名，禁止使用ip访问](nginxpai-cuo-zhi-nan/nginxxia-zhi-neng-tong-guo-yu-ming-ff0c-jin-zhi-shi-yong-ip-fang-wen.md)
   * [Nginx强制https，HTTP 301重定向到HTTPS](nginxpai-cuo-zhi-nan/nginxqiang-zhi-https-http-301-zhong-ding-xiang-dao-https.md)
-  * Nginx怎样部署SSL证书
+  * [Nginx怎样部署SSL证书](nginxpai-cuo-zhi-nan/nginxzen-yang-bu-shu-ssl-zheng-shu.md)
 * [PHP-FPM](php-fpm.md)
   * [php-fpm负载均衡](php-fpm/php-fpmfu-zai-jun-heng.md)
   * [Php-fpm的配置和优化](php-fpm/php-fpmde-pei-zhi-he-you-hua.md)
