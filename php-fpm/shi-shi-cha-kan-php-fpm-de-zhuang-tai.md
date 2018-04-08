@@ -2,13 +2,15 @@
 
 location ~ ^/status$ {
 
-                include fastcgi\_params;
+```
+            include fastcgi\_params;
 
-                fastcgi\_pass 127.0.0.1:9000;
+            fastcgi\_pass 127.0.0.1:9000;
 
-                fastcgi\_param SCRIPT\_FILENAME $fastcgi\_script\_name;
+            fastcgi\_param SCRIPT\_FILENAME $fastcgi\_script\_name;
 
-        }
+    }
+```
 
 然后在php-fpm.conf里面打开选项
 
@@ -43,6 +45,4 @@ max active processes: 25 最大活动进程
 max children reached: 0 最大的子进程达到
 
 有了这个，就可以实时的查看php-fpm的状态，进而优化php-fpm
-
-
 
