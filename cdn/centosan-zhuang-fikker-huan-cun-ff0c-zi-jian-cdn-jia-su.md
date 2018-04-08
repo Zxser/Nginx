@@ -26,7 +26,6 @@ cd
 #运行Fikker
 
 ./fikkerd.sh start
-
 ```
 
 上面已经提到，Fikker监听`80/443/6780`端口，请注意在防火墙放行端口,输入下面的命令：
@@ -46,7 +45,6 @@ firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone=public --add-port=443/tcp --permanent 
 firewall-cmd --zone=public --add-port=6780/tcp --permanent 
 firewall-cmd --reload
-
 ```
 
 完成后访问`http://IP:6780`，初始密码为`123456`，如果打不开，请输入命令`netstat -apn|grep '6780'`查看端口是否监听，检查防火墙是否放行端口。

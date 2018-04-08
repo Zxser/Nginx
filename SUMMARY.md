@@ -29,4 +29,6 @@
   * [400 Bad Request](chang-jian-de-bao-cuo-fang-an/400-bad-request.md)
 * [CDN](cdn.md)
   * [CentOS安装Fikker 缓存，自建CDN加速](cdn/centosan-zhuang-fikker-huan-cun-ff0c-zi-jian-cdn-jia-su.md)
+* [性能测试](xing-neng-ce-shi.md)
+  * Nginx使用HTTP/2与HTTPS跑分测试
 
