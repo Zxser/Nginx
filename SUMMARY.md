@@ -27,4 +27,6 @@
   * [处理大量数据高并发大流量并发操作方案](yi-xie-chu-li-fang-an/chu-li-da-liang-shu-ju-gao-bing-fa-da-liu-liang-bing-fa-cao-zuo-fang-an.md)
 * [常见的报错方案](chang-jian-de-bao-cuo-fang-an.md)
   * [400 Bad Request](chang-jian-de-bao-cuo-fang-an/400-bad-request.md)
+* [CDN](cdn.md)
+  * [CentOS安装Fikker 缓存，自建CDN加速](cdn/centosan-zhuang-fikker-huan-cun-ff0c-zi-jian-cdn-jia-su.md)
 
