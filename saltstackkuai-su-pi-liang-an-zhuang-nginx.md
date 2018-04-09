@@ -4,82 +4,6 @@
 
 在master端上配置nginx.sls文件
 
-&lt;!--  
- /\* Font Definitions \*/  
- @font-face  
-	{font-family:宋体;  
-	panose-1:2 1 6 0 3 1 1 1 1 1;  
-	mso-font-alt:SimSun;  
-	mso-font-charset:134;  
-	mso-generic-font-family:auto;  
-	mso-font-pitch:variable;  
-	mso-font-signature:3 680460288 22 0 262145 0;}  
-@font-face  
-	{font-family:"Cambria Math";  
-	panose-1:2 4 5 3 5 4 6 3 2 4;  
-	mso-font-charset:1;  
-	mso-generic-font-family:roman;  
-	mso-font-format:other;  
-	mso-font-pitch:variable;  
-	mso-font-signature:0 0 0 0 0 0;}  
-@font-face  
-	{font-family:Calibri;  
-	panose-1:2 15 5 2 2 2 4 3 2 4;  
-	mso-font-charset:0;  
-	mso-generic-font-family:swiss;  
-	mso-font-pitch:variable;  
-	mso-font-signature:-536870145 1073786111 1 0 415 0;}  
-@font-face  
-	{font-family:"\@宋体";  
-	panose-1:2 1 6 0 3 1 1 1 1 1;  
-	mso-font-charset:134;  
-	mso-generic-font-family:auto;  
-	mso-font-pitch:variable;  
-	mso-font-signature:3 680460288 22 0 262145 0;}  
- /\* Style Definitions \*/  
- p.MsoNormal, li.MsoNormal, div.MsoNormal  
-	{mso-style-unhide:no;  
-	mso-style-qformat:yes;  
-	mso-style-parent:"";  
-	margin:0cm;  
-	margin-bottom:.0001pt;  
-	text-align:justify;  
-	text-justify:inter-ideograph;  
-	mso-pagination:none;  
-	font-size:10.5pt;  
-	mso-bidi-font-size:11.0pt;  
-	font-family:"Calibri","sans-serif";  
-	mso-ascii-font-family:Calibri;  
-	mso-ascii-theme-font:minor-latin;  
-	mso-fareast-font-family:宋体;  
-	mso-fareast-theme-font:minor-fareast;  
-	mso-hansi-font-family:Calibri;  
-	mso-hansi-theme-font:minor-latin;  
-	mso-bidi-font-family:"Times New Roman";  
-	mso-bidi-theme-font:minor-bidi;  
-	mso-font-kerning:1.0pt;}  
-.MsoChpDefault  
-	{mso-style-type:export-only;  
-	mso-default-props:yes;  
-	font-family:"Calibri","sans-serif";  
-	mso-bidi-font-family:"Times New Roman";  
-	mso-bidi-theme-font:minor-bidi;}  
- /\* Page Definitions \*/  
- @page  
-	{mso-page-border-surround-header:no;  
-	mso-page-border-surround-footer:no;}  
-@page WordSection1  
-	{size:595.3pt 841.9pt;  
-	margin:72.0pt 90.0pt 72.0pt 90.0pt;  
-	mso-header-margin:42.55pt;  
-	mso-footer-margin:49.6pt;  
-	mso-paper-source:0;  
-	layout-grid:15.6pt;}  
-div.WordSection1  
-	{page:WordSection1;}  
---&gt;  
-
-
 mkdir -p /srv/salt/nginx
 
 cd /srv/salt/nginx/
@@ -88,49 +12,49 @@ vim init.sls
 
 nginx:
 
- pkg:
+pkg:
 
- - installed
+* installed
 
- service:
+  service:
 
- - running
+* running
 
- - enable: True
+* enable: True
 
- - reload: True
+* reload: True
 
- - watch:
+* watch:
 
- - pkg: nginx
+* pkg: nginx
 
- - file: /etc/nginx/nginx.conf
+* file: /etc/nginx/nginx.conf
 
- - file: /etc/nginx/conf.d/default.conf
+* file: /etc/nginx/conf.d/default.conf
 
 /etc/nginx/nginx.conf:
 
- file.managed:
+file.managed:
 
- - source: salt://etc/nginx/nginx.conf
+* source: salt://etc/nginx/nginx.conf
 
- - user: root
+* user: root
 
- - group: root
+* group: root
 
- - mode: 644
+* mode: 644
 
 /etc/nginx/conf.d/default.conf:
 
- file.managed:
+file.managed:
 
- - source: salt://etc/nginx/conf.d/default.conf
+* source: salt://etc/nginx/conf.d/default.conf
 
- - user: root
+* user: root
 
- - group: root
+* group: root
 
- - mode: 644
+* mode: 644
 
 文件讲解
 
@@ -184,7 +108,7 @@ nginx:
 
 1:在master端上安装nginx，方便生成nginx的配置文件
 
- yum -y install nginx
+yum -y install nginx
 
 2:创建nginx同步目录
 
@@ -200,7 +124,7 @@ cp /etc/nginx/conf.d/default.conf /srv/salt/etc/nginx/conf.d/
 
 5:开始安装
 
- salt '\*' state.sls nginx
+salt '\*' state.sls nginx
 
 6:测试是否安装成功
 
@@ -228,9 +152,9 @@ vim /etc/salt/master   \#找到以下内容取消注释
 
 pillar\_roots:
 
-  base:
+base:
 
-    - /srv/pillar
+* /srv/pillar
 
 pillar\_opts: True
 
@@ -244,9 +168,9 @@ cat /srv/pillar/top.sls
 
 base:
 
-  '\*':
+'\*':
 
-    - nginx    \#指代的是nginx.sls文件
+* nginx    \#指代的是nginx.sls文件
 
 定义nginx文件,每分钟更新一次
 
@@ -258,15 +182,17 @@ cat init.sls
 
 schedule:
 
- nginx:
+nginx:
 
-    function: state.sls
+```
+function: state.sls
 
-    minutes: 1
+minutes: 1
 
-    args:
+args:
 
-        - 'nginx'
+    - 'nginx'
+```
 
 刷新被控主机的pillar信息
 
@@ -278,51 +204,55 @@ salt '\*' pillar.data
 
 192.168.31.166:
 
+```
+----------
+
+schedule:
+
     ----------
 
-    schedule:
+    nginx:
 
         ----------
 
-        nginx:
+        args:
 
-            ----------
+            - nginx
 
-            args:
+        function:
 
-                - nginx
+            state.sls
 
-            function:
+        minutes:
 
-                state.sls
-
-            minutes:
-
-                1
+            1
+```
 
 192.168.31.188:
 
+```
+----------
+
+schedule:
+
     ----------
 
-    schedule:
+    nginx:
 
         ----------
 
-        nginx:
+        args:
 
-            ----------
+            - nginx
 
-            args:
+        function:
 
-                - nginx
+            state.sls
 
-            function:
+        minutes:
 
-                state.sls
-
-            minutes:
-
-                1
+            1
+```
 
 测试
 
@@ -330,11 +260,9 @@ salt '\*' pillar.data
 
 vim /srv/salt/etc/nginx/conf.d/default.conf
 
- listen       666 default\_server;
+listen       666 default\_server;
 
 一分钟后在minion端查看端口：
 
 netstat -tnl
-
-
 
