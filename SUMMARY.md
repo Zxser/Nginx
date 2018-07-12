@@ -30,5 +30,6 @@
 * [CDN](cdn.md)
   * [CentOS安装Fikker 缓存，自建CDN加速](cdn/centosan-zhuang-fikker-huan-cun-ff0c-zi-jian-cdn-jia-su.md)
 * [Nginx优化篇](nginxyou-hua-pian.md)
-  * [Nginx优化篇——参数优化](nginxyou-hua-pian/nginxyou-hua-pian-2014-2014-pei-zhi-you-hua.md)
+  * [Nginx优化篇--参数优化](nginxyou-hua-pian/nginxyou-hua-pian-2014-2014-pei-zhi-you-hua.md)
+  * [Nginx优化篇--内核优化](nginxyou-hua-pian/nginxyou-hua-7bc7-nei-he-you-hua.md)
 
