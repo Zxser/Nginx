@@ -32,4 +32,5 @@
 * [Nginx优化篇](nginxyou-hua-pian.md)
   * [Nginx优化篇--参数优化](nginxyou-hua-pian/nginxyou-hua-pian-2014-2014-pei-zhi-you-hua.md)
   * [Nginx优化篇--内核优化](nginxyou-hua-pian/nginxyou-hua-7bc7-nei-he-you-hua.md)
+  * [Nginx优化25条](nginxyou-hua-pian/nginxyou-hua-25-tiao.md)
 
