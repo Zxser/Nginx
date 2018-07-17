@@ -33,4 +33,5 @@
   * [Nginx优化篇--参数优化](nginxyou-hua-pian/nginxyou-hua-pian-2014-2014-pei-zhi-you-hua.md)
   * [Nginx优化篇--内核优化](nginxyou-hua-pian/nginxyou-hua-7bc7-nei-he-you-hua.md)
   * [Nginx优化25条](nginxyou-hua-pian/nginxyou-hua-25-tiao.md)
+  * [Nginx+php-fpm性能参数优化原则](nginxyou-hua-pian/nginx+php-fpmxing-neng-can-shu-you-hua-yuan-ze.md)
 
